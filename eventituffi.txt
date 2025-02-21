@@ -1,0 +1,188 @@
+[
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3056-1%C2%AA-prova-per-trofeo-giovanissimi-es-c2-e-campionato-italiano-indoor-es-c1.html",
+        "data_inizio_gg": "21",
+        "data_inizio_mm": "Febbraio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "23",
+        "data_fine_mm": "Febbraio",
+        "data_fine_yy": "2025",
+        "titolo": "1\u00aa prova per Trofeo Giovanissimi Es. C2 e Campionato Italiano Indoor Es. C1",
+        "luogo": "Trieste"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3057-coppa-los-angeles-2028.html",
+        "data_inizio_gg": "07",
+        "data_inizio_mm": "Marzo",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "09",
+        "data_fine_mm": "Marzo",
+        "data_fine_yy": "2025",
+        "titolo": "Coppa Los Angeles 2028",
+        "luogo": "Trieste"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3114-8-nazioni-giovanili.html",
+        "data_inizio_gg": "21",
+        "data_inizio_mm": "Marzo",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "23",
+        "data_fine_mm": "Marzo",
+        "data_fine_yy": "2025",
+        "titolo": "8 Nazioni Giovanili",
+        "luogo": "Aachen (GER)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3058-campionato-italiano-assoluto-primaverile-open-unipol.html",
+        "data_inizio_gg": "28",
+        "data_inizio_mm": "Marzo",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "30",
+        "data_fine_mm": "Marzo",
+        "data_fine_yy": "2025",
+        "titolo": "Campionato Italiano Assoluto Primaverile Open Unipol",
+        "luogo": "Torino"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3115-world-aquatics-diving-world-cup.html",
+        "data_inizio_gg": "03",
+        "data_inizio_mm": "Aprile",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "06",
+        "data_fine_mm": "Aprile",
+        "data_fine_yy": "2025",
+        "titolo": "World Aquatics Diving World Cup",
+        "luogo": "Guadalajara (MEX)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3116-world-aquatics-diving-world-cup.html",
+        "data_inizio_gg": "10",
+        "data_inizio_mm": "Aprile",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "13",
+        "data_fine_mm": "Aprile",
+        "data_fine_yy": "2025",
+        "titolo": "World Aquatics Diving World Cup",
+        "luogo": "Windsor (CAN)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3117-meeting-internazionale-giovanile.html",
+        "data_inizio_gg": "23",
+        "data_inizio_mm": "Aprile",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "26",
+        "data_fine_mm": "Aprile",
+        "data_fine_yy": "2025",
+        "titolo": "Meeting Internazionale Giovanile",
+        "luogo": "Dresda (GER)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3059-2%C2%AA-prova-per-trofeo-giovanissimi-es-c2-e-2%C2%AA-prova-atleti-azzurri-es-c1.html",
+        "data_inizio_gg": "02",
+        "data_inizio_mm": "Maggio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "04",
+        "data_fine_mm": "Maggio",
+        "data_fine_yy": "2025",
+        "titolo": "2\u00aa prova per Trofeo Giovanissimi Es. C2 e 2\u00aa prova Atleti Azzurri Es. C1",
+        "luogo": "Bolzano"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3118-super-final-world-cup.html",
+        "data_inizio_gg": "02",
+        "data_inizio_mm": "Maggio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "04",
+        "data_fine_mm": "Maggio",
+        "data_fine_yy": "2025",
+        "titolo": "Super Final World Cup",
+        "luogo": "Pechino (CHN)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3119-campionati-europei-sede-da-definire.html",
+        "data_inizio_gg": "25",
+        "data_inizio_mm": "Maggio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "31",
+        "data_fine_mm": "Maggio",
+        "data_fine_yy": "2025",
+        "titolo": "Campionati Europei - sede da definire"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3060-gran-premio-atleti-azzurri-d-italia.html",
+        "data_inizio_gg": "30",
+        "data_inizio_mm": "Maggio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "01",
+        "data_fine_mm": "Giugno",
+        "data_fine_yy": "2025",
+        "titolo": "Gran Premio Atleti Azzurri d'Italia",
+        "luogo": "Roma"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3120-47%C2%B0-bolzano-diving-meeting.html",
+        "data_inizio_gg": "04",
+        "data_inizio_mm": "Giugno",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "06",
+        "data_fine_mm": "Giugno",
+        "data_fine_yy": "2025",
+        "titolo": "47\u00b0 Bolzano Diving Meeting",
+        "luogo": "Bolzano"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3061-finale-trofeo-giovanissimi-es-c1-c2-e-finale-es-c3.html",
+        "data_inizio_gg": "09",
+        "data_inizio_mm": "Luglio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "11",
+        "data_fine_mm": "Luglio",
+        "data_fine_yy": "2025",
+        "titolo": "Finale Trofeo Giovanissimi Es. C1/C2 e Finale Es. C3",
+        "luogo": "Riccione (RN)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3121-universiadi.html",
+        "data_inizio_gg": "17",
+        "data_inizio_mm": "Luglio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "23",
+        "data_fine_mm": "Luglio",
+        "data_fine_yy": "2025",
+        "titolo": "Universiadi",
+        "luogo": "Berlino (GER)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3062-campionato-italiano-estivo-di-categoria.html",
+        "data_inizio_gg": "25",
+        "data_inizio_mm": "Luglio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "27",
+        "data_fine_mm": "Luglio",
+        "data_fine_yy": "2025",
+        "titolo": "Campionato Italiano Estivo di Categoria",
+        "luogo": "Roma"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3122-campionati-mondiali.html",
+        "data_inizio_gg": "26",
+        "data_inizio_mm": "Luglio",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "03",
+        "data_fine_mm": "Agosto",
+        "data_fine_yy": "2025",
+        "titolo": "Campionati Mondiali",
+        "luogo": "Singapore (SGP)"
+    },
+    {
+        "url": "/home/tuffi/eventi-tuffi/event/3063-campionato-italiano-assoluto-estivo-open.html",
+        "data_inizio_gg": "08",
+        "data_inizio_mm": "Agosto",
+        "data_inizio_yy": "2025",
+        "data_fine_gg": "10",
+        "data_fine_mm": "Agosto",
+        "data_fine_yy": "2025",
+        "titolo": "Campionato Italiano Assoluto Estivo Open",
+        "luogo": "Roma"
+    }
+]
