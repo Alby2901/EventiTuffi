@@ -1,8 +1,22 @@
+"""
+monitoreventituffi.py
+
+Questo script Python recupera gli eventi di tuffi dal sito web della Federazione Italiana Nuoto,
+li confronta con gli eventi precedenti e invia email di notifica per eventuali nuovi eventi o modifiche.
+"""
+import logging
 import web_scraper
 import data_extractor
 import utility
 import mail_sender
 import time
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)  # Ottieni un logger con il nome del modulo
+
+# logger.info("Programma avviato.")  # Messaggio informativo
+# logger.debug(f"Variabile eventi: {eventi}")  # Messaggio di debug
+# logger.error(f"Errore durante la richiesta: {e}")  # Messaggio di errore
 
 def main():
     """
@@ -16,6 +30,7 @@ def main():
         Nessun valore restituito.
     """
 
+    logger.info("Programma avviato.")  # Messaggio informativo
     # esegue il parsing della pagina eventi
     soup = web_scraper.recupera_e_parsa_pagina('https://www.federnuoto.it/home/tuffi/eventi-tuffi.html')
     # crea un array di oggetti evento con i dati estratti
@@ -26,35 +41,47 @@ def main():
         # dettagli_evento con i dati estratti
         i = 1
         for evento in eventi:
+            # Estrazione dati dalla pagina dei dettagli dell'evento
+            logger.debug(f"Inizio estrazione dettagli evento n. {str(i)}")
             soup_evento = web_scraper.recupera_e_parsa_pagina('https://www.federnuoto.it' + evento.get('url'))
-            print('Estrazioe Evento n. ' + str(i))
+            logger.debug(f"Fine estrazione dettagli evento n. {str(i)}")
+            
+            # Elaborazione dati della pagina dei dettagli dell'evento
+            logger.debug(f"Inizio elabor. dettagli evento n. {str(i)}")
             dettagli_evento = data_extractor.estrai_dettagli_evento(soup_evento)
-            # print(dettagli_evento)
-            print('Estrazioe Dettagli Evento n. '  + str(i))
+            logger.debug(f"Variabile dettagli_evento: {dettagli_evento}")
+            logger.debug(f"Fine elabor. dettagli evento n. {str(i)}")
+
+            # Aggiunta dei dettagli dell'evento all'oggetto evento
             evento["eve-details"] = dettagli_evento
-            print('Estratti Evento e Dettahli Evento n. '  + str(i))
+            
             i += 1
             time.sleep(1)
-            # print(evento)
+            logger.debug(f"Variabile evento: {evento}")
 
+    # Carica gli eventi precedenti
     eventi_precedenti = utility.carica_eventi("eventi.json")
 
-    # print(eventi_precedenti)
+    logger.debug(f"Variabile eventi_precedenti: {eventi_precedenti}")
 
-    nuovi_eventi, eventi_modificati = utility.confronta_eventi(eventi, eventi_precedenti)  # Gestisci le due liste
-    print('Nuovi eventi => ' + str(nuovi_eventi))    
-    print('Eventi modificati => ' + str(eventi_modificati))
+    # Confronta gli eventi attuali con quelli precedenti
+    nuovi_eventi, eventi_modificati = utility.confronta_eventi(eventi, eventi_precedenti)  # Gestisci le due liste      
+    logger.debug(f"Variabile nuovi_eventi: {str(nuovi_eventi)}")
+    logger.debug(f"Variabile eventi_modificati: {str(eventi_modificati)}")
 
+
+    # Invia email di notifica se ci sono nuovi eventi o eventi modificati
     if nuovi_eventi or eventi_modificati:
         mail_sender.invia_email_notifiche(nuovi_eventi, eventi_modificati)
         utility.salva_eventi(eventi, "eventi.json")
 
-    # Stampa temporanea per controllo dati ricevuti
-    # if eventi:
-    #     for evento in eventi:
-    #         print(evento)
+    logger.info("Programma terminato.")  # Messaggio informativo
+
+
+# Funzione di test per l'invio di email
 def test_mail_send():
     mail_sender.invia_email_test()
+
 
 if __name__ == "__main__":
     main()
