@@ -57,7 +57,7 @@ def estrai_eventi(soup):
     return eventi
 
 def estrai_dettagli_evento(soup):
-    print('====>>>>>')
+    #print('====>>>>>')
     # print(soup)
     dettagli_div = soup.find("div", class_="eve_details")
     if dettagli_div:

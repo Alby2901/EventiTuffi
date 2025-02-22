@@ -4,6 +4,8 @@ monitoreventituffi.py
 Questo script Python recupera gli eventi di tuffi dal sito web della Federazione Italiana Nuoto,
 li confronta con gli eventi precedenti e invia email di notifica per eventuali nuovi eventi o modifiche.
 """
+
+import argparse
 import logging
 import web_scraper
 import data_extractor
@@ -42,6 +44,7 @@ def main():
         i = 1
         for evento in eventi:
             # Estrazione dati dalla pagina dei dettagli dell'evento
+            logger.info(f"Inizio operazioni su dettagli evento n. {str(i)}")
             logger.debug(f"Inizio estrazione dettagli evento n. {str(i)}")
             soup_evento = web_scraper.recupera_e_parsa_pagina('https://www.federnuoto.it' + evento.get('url'))
             logger.debug(f"Fine estrazione dettagli evento n. {str(i)}")
@@ -54,26 +57,33 @@ def main():
 
             # Aggiunta dei dettagli dell'evento all'oggetto evento
             evento["eve-details"] = dettagli_evento
-            
+            logger.info(f"Fine operazioni su dettagli evento n. {str(i)}")
             i += 1
             time.sleep(1)
             logger.debug(f"Variabile evento: {evento}")
 
-    # Carica gli eventi precedenti
-    eventi_precedenti = utility.carica_eventi("eventi.json")
 
+    # Carica gli eventi precedenti
+    logger.info(f"Carica eventi precedenti")
+    eventi_precedenti = utility.carica_eventi("eventi.json")
     logger.debug(f"Variabile eventi_precedenti: {eventi_precedenti}")
 
     # Confronta gli eventi attuali con quelli precedenti
+    logger.info(f"Confronta eventi precedenti")
     nuovi_eventi, eventi_modificati = utility.confronta_eventi(eventi, eventi_precedenti)  # Gestisci le due liste      
     logger.debug(f"Variabile nuovi_eventi: {str(nuovi_eventi)}")
     logger.debug(f"Variabile eventi_modificati: {str(eventi_modificati)}")
 
 
+    
+    
     # Invia email di notifica se ci sono nuovi eventi o eventi modificati
     if nuovi_eventi or eventi_modificati:
+        logger.info("Invio email di notifica.")
         mail_sender.invia_email_notifiche(nuovi_eventi, eventi_modificati)
         utility.salva_eventi(eventi, "eventi.json")
+    else:
+        logger.info("Nessun nuovo evento o evento modificato.")
 
     logger.info("Programma terminato.")  # Messaggio informativo
 
@@ -84,5 +94,12 @@ def test_mail_send():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Monitora eventi di tuffi.")
+    parser.add_argument("--debug", action="store_true", help="Abilita il livello di log DEBUG.")
+    args = parser.parse_args()
+
+    if args.debug:
+        logger.setLevel(logging.DEBUG)
+
     main()
     # test_mail_send()
