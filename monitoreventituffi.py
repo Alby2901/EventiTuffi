@@ -5,6 +5,17 @@ import mail_sender
 import time
 
 def main():
+    """
+    Funzione principale del programma.
+    Recupera gli eventi dal sito web, li confronta con gli eventi precedenti e invia email di notifica.
+
+    Args:
+        Nessun argomento.
+
+    Returns:
+        Nessun valore restituito.
+    """
+
     # esegue il parsing della pagina eventi
     soup = web_scraper.recupera_e_parsa_pagina('https://www.federnuoto.it/home/tuffi/eventi-tuffi.html')
     # crea un array di oggetti evento con i dati estratti
