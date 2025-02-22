@@ -46,6 +46,5 @@ def test_mail_send():
     mail_sender.invia_email_test()
 
 if __name__ == "__main__":
-    # main()
-    test_mail_send()
-
+    main()
+    # test_mail_send()
